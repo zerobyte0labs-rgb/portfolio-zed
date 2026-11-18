@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aya Zeddoun – Cybersecurity &amp; AI</title>
+<meta name="description" content="Portfolio of Aya Zeddoun, fourth-year AI engineering student focused on defensive security, digital forensics and data analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1626; --surface:#16203a; --line:#263456; --text:#e8edf7; --muted:#93a0ba;
+  --accent:#6ea8ff; --mark:#ffb454;
+  --sans:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.05rem/1.65 var(--sans)}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--mark);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.5rem}
+header.top{border-bottom:1px solid var(--line)}
+nav{display:flex;gap:1.5rem;flex-wrap:wrap;padding:1rem 0;font-size:.95rem}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--text)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;padding:5rem 0 4.5rem}
+h1{font-size:clamp(2.8rem,7vw,5rem);line-height:1;margin:0 0 1.2rem;font-weight:800;letter-spacing:-.03em}
+.lead{font-size:1.2rem;color:var(--muted);max-width:34ch;margin:0 0 1.8rem}
+.links{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.6rem 1.1rem;border:1px solid var(--line);border-radius:6px;color:var(--text);text-decoration:none;font-weight:600;background:var(--surface)}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#0a1020}
+.dump{font:400 .82rem/1.7 var(--mono);color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1.2rem;overflow-x:auto;white-space:pre;user-select:text}
+.dump .off{color:#5d6b8c}
+.dump .hl{color:var(--mark)}
+.dump .hx{color:var(--text)}
+
+/* sections */
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:1.7rem;margin:0 0 1.6rem;letter-spacing:-.01em}
+h3{font-size:1.15rem;margin:0}
+p{margin:0 0 1rem;max-width:68ch}
+.muted{color:var(--muted)}
+.mono{font-family:var(--mono);font-size:.85rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0 0 0 1.4rem;border-left:2px solid var(--line)}
+.tl li{position:relative;padding-bottom:2rem}
+.tl li::before{content:"";position:absolute;left:calc(-1.4rem - 6px);top:.55rem;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.tl ul{margin:.6rem 0 0;padding-left:1.1rem;color:var(--muted)}
+.tl .where{font-family:var(--mono);font-size:.85rem;color:var(--mark)}
+
+/* projects */
+.proj{display:grid;grid-template-columns:220px 1fr;gap:1.5rem;padding:1.4rem 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.6rem}
+.tag{font:400 .78rem var(--mono);border:1px solid var(--line);border-radius:4px;padding:.1rem .5rem;color:var(--muted)}
+.proj p{margin:0 0 .5rem;color:var(--muted)}
+
+/* skills */
+dl{margin:0}
+dt{font-weight:600;margin-top:1rem}
+dt:first-child{margin-top:0}
+dd{margin:.2rem 0 0;color:var(--muted)}
+
+ul.plain{list-style:none;margin:0;padding:0}
+ul.plain li{padding:.45rem 0;border-bottom:1px solid var(--line)}
+ul.plain li:last-child{border-bottom:0}
+ul.plain span{display:block;color:var(--muted);font-size:.92rem}
+
+footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.9rem}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding:3rem 0}
+  .grid2{grid-template-columns:1fr;gap:2rem}
+  .proj{grid-template-columns:1fr;gap:.5rem}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <nav aria-label="Sections">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a>
+    <a href="#skills">Skills</a><a href="#credentials">Certifications and CTFs</a><a href="#contact">Contact</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Aya Zeddoun</h1>
+      <p class="lead">Fourth-year AI engineering student focused on defensive security and digital forensics.</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:aa.zeddoun@ensta.edu.dz">Email me</a>
+        <a class="btn" href="https://github.com/ayazedd7" rel="noopener">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/aya-zeddoun-262b7b243" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="dump" id="dump" aria-hidden="true"></div>
+  </div>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I study at the École Supérieure des Technologies Avancées in Algiers, where I’m working toward a computer science engineering degree. My interests sit where security meets data: log analysis, malware analysis, forensics, data protection and machine learning.</p>
+    <p>I play CTFs with forensics as my specialty, mentor newcomers at Shellmates, and write the challenges other people solve.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ol class="tl">
+      <li>
+        <h3>Cybersecurity and AI intern</h3>
+        <div class="where">Galicho, Sidi Bel Abbès, Algeria</div>
+        <ul>
+          <li>Worked on cybersecurity and AI projects in a professional setting.</li>
+          <li>Helped with security analysis, networking and Linux-based tasks.</li>
+          <li>Applied AI concepts to real-world use cases with the team.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Cybersecurity intern</h3>
+        <div class="where">CodeAlpha, remote</div>
+        <ul>
+          <li>Built cybersecurity projects in Python.</li>
+          <li>Wrote and tested a network sniffer for packet capture and traffic analysis.</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <article class="proj">
+      <div><h3>Employee Burnout Analysis Dashboard</h3>
+        <div class="tags"><span class="tag">Streamlit</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span></div></div>
+      <div><p>A Streamlit dashboard that explores employee burnout and workplace stress through statistical analysis and a linear regression model that predicts burnout risk. It includes interactive charts and correlation heatmaps.</p>
+        <a href="https://finalproject48-69.streamlit.app" rel="noopener">Open the live app</a></div>
+    </article>
+    <article class="proj">
+      <div><h3>Phishing email detection bot</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Telegram</span></div></div>
+      <div><p>A Telegram bot that checks emails for phishing using heuristics and pattern matching, so people can test a suspicious message right from a chat.</p></div>
+    </article>
+    <article class="proj">
+      <div><h3>AMANAH</h3>
+        <div class="tags"><span class="tag">Backend</span><span class="tag">APIs</span><span class="tag">Database</span></div></div>
+      <div><p>A lost-and-found platform that connects people across Algeria. I built the server-side logic, APIs and database layer as backend developer.</p></div>
+    </article>
+    <article class="proj">
+      <div><h3>Network sniffer</h3>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Networking</span></div></div>
+      <div><p>A packet capture and traffic analysis tool, built during my CodeAlpha internship.</p></div>
+    </article>
+    <article class="proj">
+      <div><h3>Keylogger</h3>
+        <div class="tags"><span class="tag">Malware research</span><span class="tag">Education</span></div></div>
+      <div><p>Built for education and research, to understand how malware behaves and how it interacts with the system at a low level.</p></div>
+    </article>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid2">
+      <dl>
+        <dt>Security</dt><dd>Log analysis, basic forensics, malware analysis (beginner), SSH, firewalls, VPN, TCP/IP, DNS, HTTP</dd>
+        <dt>Programming</dt><dd>Python, C, Java, Bash, SQL</dd>
+        <dt>Data and AI</dt><dd>Data manipulation, machine learning basics, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn</dd>
+      </dl>
+      <dl>
+        <dt>Tools</dt><dd>Wireshark, Volatility, FTK Imager, Ghidra, Autopsy, Git, VS Code</dd>
+        <dt>Systems</dt><dd>Kali Linux, Ubuntu, VirtualBox, VMware, cloud and infrastructure (learning)</dd>
+        <dt>Languages</dt><dd>Arabic (native), French (intermediate), English (intermediate)</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="credentials">
+    <h2>Certifications and CTFs</h2>
+    <div class="grid2">
+      <div>
+        <h3>Certifications</h3>
+        <ul class="plain" style="margin-top:.8rem">
+          <li>Certified LLM Security Professional (CLLMSP)<span>Red Team Leaders, Oct. 2026</span></li>
+          <li>Malware Analysis Skill Path<span>LetsDefend, Feb. 2025</span></li>
+          <li>Introduction to Digital Forensics<span>Security Blue Team, Apr. 2025</span></li>
+          <li>Security+: General Security Concepts<span>Cybrary, Aug. 2024</span></li>
+          <li>Module completion<span>Hack The Box Academy, 2025</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>CTF competitions (forensics)</h3>
+        <ul class="plain" style="margin-top:.8rem">
+          <li>BearcatCTF 2026<span>Cyber@UC</span></li>
+          <li>ApoorvCTF ’26<span>Team Hexara</span></li>
+          <li>ASIS CTF 2026</li>
+          <li>P3RF3CT Root 2025</li>
+        </ul>
+        <h3 style="margin-top:2rem">Community</h3>
+        <ul class="plain" style="margin-top:.8rem">
+          <li>Shellmates, communication manager and CTF author<span>Member since May 2023</span></li>
+          <li>Shellmates Integration Program, mentor<span>2025</span></li>
+          <li>BSides Algiers, 7th edition, staff member<span>Dec. 2025</span></li>
+          <li>CODEC, development team<span>Member since May 2025</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>I’m open to security and AI internships, CTF teams and collaborations. Email is the fastest way to reach me.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:aa.zeddoun@ensta.edu.dz">aa.zeddoun@ensta.edu.dz</a>
+      <a class="btn" href="https://github.com/ayazedd7" rel="noopener">GitHub</a>
+      <a class="btn" href="https://linkedin.com/in/aya-zeddoun-262b7b243" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">Aya Zeddoun, Algiers, Algeria</div></footer>
+
+<script>
+(function(){
+  var s = "ZEDDOUN AYA // forensics, ai, defensive security // ayazedd7";
+  var el = document.getElementById("dump");
+  var rows = [];
+  for (var i = 0; i < s.length; i += 16) {
+    var chunk = s.slice(i, i + 16), hex = [], asc = "";
+    for (var j = 0; j < 16; j++) {
+      if (j < chunk.length) {
+        var c = chunk.charCodeAt(j);
+        hex.push(c.toString(16).padStart(2, "0"));
+        asc += chunk[j].replace("&", "&amp;").replace("<", "&lt;");
+      } else { hex.push("  "); asc += " "; }
+      if (j === 7) hex.push("");
+    }
+    var off = i.toString(16).padStart(8, "0");
+    rows.push('<span class="off">' + off + '</span>  <span class="hx">' + hex.join(" ") + '</span>  <span class="' + (i === 0 ? "hl" : "") + '">|' + asc + '|</span>');
+  }
+  el.innerHTML = rows.join("\n");
+})();
+</script>
+</body>
+</html>
